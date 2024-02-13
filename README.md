@@ -16,5 +16,9 @@ Below I have tried to provide some details about the project like its design and
 # Tech-Stack
   * `fastAPI` : to create this API.
   * `SQLAlchemy` : as the ORM.
-  * `SQLite` : as the databse , but since I used an ORM you can use anyother DBSM inplace of it. Just make sure that the Databse you create has the same naming , tabel relationships and columns.   
-
+  * `SQLite` : as the databse , but since I used an ORM you can use anyother DBSM inplace of it. Just make sure that the Databse you create has the same naming , tabel relationships and columns.
+  * `uvicorn` : an ASGI server for serving the fastAPI app.   
+  
+# How to run
+  After cloning this repository navigate to `app` then run the command `uvicorn main:app`.
+  * Note : I know I haven't provided the requirements , the main ones are  `pydantic` , `uvicorn` , `fastAPI` and `SQLite`. 
