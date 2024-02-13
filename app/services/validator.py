@@ -3,6 +3,8 @@ from services.databaseService import Player
 from models.player import Player as P 
 from typing import List
 
+MIN_PLAYERS = 5
+
 def validatePlayers(players : List[P]):
     '''Function for checking whether the team roster submitted adheres to the rules'''
     
@@ -10,10 +12,10 @@ def validatePlayers(players : List[P]):
     playerList = []
     
     #check the number of players
-    if len(players) < 5:
+    if len(players) < MIN_PLAYERS:
         return {
             "success" : False,
-            "detail" : f"You need to add {(5-len(players))} to have a complete team"
+            "detail" : f"You need to add {(MIN_PLAYERS-len(players))} to have a complete team"
         }
     
     #fetch all the players from the database
